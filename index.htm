@@ -3,28 +3,31 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>AID Dashboard</title>
+    <title>AID</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../eqcrm_/aidDashboard/mainStyle'>
     <link rel='stylesheet' type='text/css' media='screen' href='mainStyle.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sync" />
     <script src='main.js'></script>
+    <script src='../eqcrm_/aidDashboard/main'></script>
 </head>
 <body>
     <div id="overview">
         <!--Side Nav-->
     <div class="sidebar">
         <a class="active" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'overview')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'overview')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'overview')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'overview')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'overview')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'overview')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'overview')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'overview')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'overview')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'overview')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'overview')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -95,7 +98,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="2">
-                                            <h3>Professional Adviser Details</h3>
+                                            <strong>Professional Adviser Details</strong>
                                         </td>
                                     </tr>
                                     <tr>
@@ -110,9 +113,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
-                                <h3>Client Basic Details</h3>
-                            </td>
+                            <td style="width: 400px; vertical-align: top; text-align: left;">
+                                <table class="fieldTable">
+                                    <tr>
+                                        <td colspan="2">
+                                            <strong>Client Basic Details</strong>
+                                        </td>
+                                    </tr>
+                                </table>
                         </tr>
                         <tr>
                             <td style="width: 400px; vertical-align: top; text-align: left;">
@@ -204,17 +212,18 @@
         <!--Side Nav-->
         <div class="sidebar">
             <a href="#overview">Overview</a>
-            <a href="#objectives">Objectives</a>
+            <a href="#objectives">Background & Objectives</a>
             <a href="#risk">Risk</a>
             <a href="#dna">Financial DNA</a>
             <a href="#income">Cashflow</a>
             <a href="#asset">Asset Schedule</a>
-            <a href="#prof">Legals</a>
+            <a href="#prof">Wills</a>
+            <a href="#prof2">Power of Attorney</a>
             <a href="#fnf">Facts & Feedback</a>
             <a href="#actions">Actions</a>
-            <a href="#reload" id="syncButton">
+            <a href="#reload" id="syncButton" class="syncIcon">
                 <table>
-                    <tr class="syncIcon">
+                    <tr>
                         <td><span class="material-symbols-outlined">sync</span></td>
                         <td><p>Sync Data</p></td>
                     </tr>
@@ -232,17 +241,18 @@
         <!--Side Nav-->
         <div class="sidebar">
             <a class="active" href="#overview">Overview</a>
-            <a onclick="toggleDiv('objectives', 'overview')" href="#objectives">Objectives</a>
+            <a onclick="toggleDiv('objectives', 'overview')" href="#objectives">Background & Objectives</a>
             <a onclick="toggleDiv('risk', 'overview')" href="#risk">Risk</a>
             <a onclick="toggleDiv('dna', 'overview')" href="#dna">Financial DNA</a>
             <a onclick="toggleDiv('income', 'overview')" href="#income">Cashflow</a>
             <a onclick="toggleDiv('asset', 'overview')" href="#asset">Asset Schedule</a>
-            <a onclick="toggleDiv('prof', 'overview')" href="#prof">Legals</a>
+            <a onclick="toggleDiv('prof', 'overview')" href="#prof">Wills</a>
+            <a onclick="toggleDiv('prof2', 'overview')" href="#prof2">Power of Attorney</a>
             <a onclick="toggleDiv('fnf', 'overview')" href="#fnf">Facts & Feedback</a>
             <a onclick="toggleDiv('actions', 'overview')" href="#actions">Actions</a>
-            <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+            <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton" class="syncIcon">
                 <table>
-                    <tr class="syncIcon">
+                    <tr>
                         <td><span class="material-symbols-outlined">sync</span></td>
                         <td><p>Sync Data</p></td>
                     </tr>
@@ -260,17 +270,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'objectives')" href="#overview">Overview</a>
-        <a class="active" href="#objectives">Objectives</a>
+        <a class="active" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'objectives')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'objectives')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'objectives')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'objectives')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'objectives')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'objectives')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'objectives')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'objectives')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'objectives')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -293,19 +304,19 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="width: 450px; vertical-align: top; text-align: left;">
+                                <td style="width: 100%; vertical-align: top; text-align: left;" colspan="2">
                                     <h3>Primary Objective</h3>
-                                    <p class="scrollbox-full">
-                                        
-                                        <span id="primObj"></span>
-                                    </p>
+                                    <p class="scrollbox-half"><span id="primObj"></span></p>
                                 </td>
-                                <td style="width: 450px; vertical-align: top; text-align: left;">
+                            </tr>
+                            <tr>
+                                <td style="width: 50%; vertical-align: top; text-align: left;">
                                     <h3>Secondary Objective</h3>
-                                    <p class="scrollbox-full">
-                                        
-                                        <span id="secObj"></span>
-                                    </p>
+                                    <p class="scrollbox-half"><span id="secObj"></span></p>
+                                </td>
+                                <td style="width: 50%; vertical-align: top; text-align: left;">
+                                    <h3>Background</h3>
+                                    <p class="scrollbox-half"><span id="background"></span></p>
                                 </td>
                             </tr>
     
@@ -323,17 +334,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'risk')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'risk')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'risk')" href="#objectives">Background & Objectives</a>
         <a class="active" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'risk')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'risk')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'risk')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'risk')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'risk')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'risk')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'risk')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'risk')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -358,33 +370,21 @@
                             <tr>
                                 <td style="width: 400px; vertical-align: top; text-align: left;">
                                     <h3>Knowledge & Experience</h3>
-                                    <p class="scrollbox-half">
-                                        
-                                        <span id="knowledge"></span>
-                                    </p>
+                                    <p class="scrollbox-half"><span id="knowledge"></span></p>
                                 </td>
                                 <td style="width: 400px; vertical-align: top; text-align: left;">
                                     <h3>Need For Risk</h3>
-                                    <p class="scrollbox-half">
-                                        
-                                        <span id="needForRisk"></span>
-                                    </p>
+                                    <p class="scrollbox-half"><span id="needForRisk"></span></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="width: 400px; vertical-align: top; text-align: left;">
                                     <h3>Desire For Risk</h3>
-                                    <p class="scrollbox-half">
-                                        
-                                        <span id="desireForRisk"></span>
-                                    </p>
+                                    <p class="scrollbox-half"><span id="desireForRisk"></span></p>
                                 </td>
                                 <td style="width: 400px; vertical-align: top; text-align: left;">
                                     <h3>Capacity For Loss</h3>
-                                    <p class="scrollbox-half">
-                                        
-                                        <span id="capacityForLoss"></span>
-                                    </p>
+                                    <p class="scrollbox-half"><span id="capacityForLoss"></span></p>
                                     <table class="fieldTable">
                                         <tr>
                                             <td>Rating</td>
@@ -404,17 +404,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'dna')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'dna')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'dna')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'dna')" href="#risk">Risk</a>
         <a class="active" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'dna')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'dna')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'dna')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'dna')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'dna')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'dna')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'dna')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -439,79 +440,100 @@
                             <tr>
                                 <td style="vertical-align: top; text-align: left;">
                                     <h3><span id="pcName"></span></h3>
+                                    <div id="pcDnaTable">
+                                        <table class="fieldTable">
+                                            <tr>
+                                                <td>Risk behaviour score</td>
+                                                <td><span id="pcRiskScore"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Portfolio risk group</td>
+                                                <td><span id="pcPortRiskGroup"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial relationship management</td>
+                                                <td><span id="pcFinRelMgt"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial planning management</td>
+                                                <td><span id="pcFinPlnMgt"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wealth building motivation</td>
+                                                <td><span id="pcWlthBldMtv"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial emotional intelligence</td>
+                                                <td><span id="pcFinEmInt"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Natural behaviour style</td>
+                                                <td><span id="pcNtBehSty"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Biases</td>
+                                                <td><span id="pcBias1"></span>, <span id="pcBias2"></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="pcDnaNotFound">
+                                        <table>
 
-                                    <table class="fieldTable">
-                                        <tr>
-                                            <td>Risk behaviour score</td>
-                                            <td><span id="pcRiskScore"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Portfolio risk group</td>
-                                            <td><span id="pcPortRiskGroup"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial relationship management</td>
-                                            <td><span id="pcFinRelMgt"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial planning management</td>
-                                            <td><span id="pcFinPlnMgt"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Wealth building motivation</td>
-                                            <td><span id="pcWlthBldMtv"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial emotional intelligence</td>
-                                            <td><span id="pcFinEmInt"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Natural behaviour style</td>
-                                            <td><span id="pcNtBehSty"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Biases</td>
-                                            <td><span id="pcBias1"></span>, <span id="pcBias2"></span></td>
-                                        </tr>
-                                    </table>
+                                            <tr>
+                                                <td>Financial DNA Questionnaire not completed.</td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
                                 </td>
                                 <td style="vertical-align: top; text-align: left;" id="secConDNA">
 
                                     <h3><span id="scName"></span></h3>
-                                    <table class="fieldTable">
-                                        <tr>
-                                            <td>Risk behaviour score</td>
-                                            <td><span id="scRiskScore"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Portfolio risk group</td>
-                                            <td><span id="scPortRiskGroup"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial relationship management</td>
-                                            <td><span id="scFinRelMgt"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial planning management</td>
-                                            <td><span id="scFinPlnMgt"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Wealth building motivation</td>
-                                            <td><span id="scWlthBldMtv"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Financial emotional intelligence</td>
-                                            <td><span id="scFinEmInt"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Natural behaviour style</td>
-                                            <td><span id="scNtBehSty"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Biases</td>
-                                            <td><span id="scBias1"></span>, <span id="scBias2"></span></td>
-                                        </tr>
-                                    </table>
+                                    <div id="scDnaTable">
+                                        <table class="fieldTable">
+                                            <tr>
+                                                <td>Risk behaviour score</td>
+                                                <td><span id="scRiskScore"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Portfolio risk group</td>
+                                                <td><span id="scPortRiskGroup"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial relationship management</td>
+                                                <td><span id="scFinRelMgt"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial planning management</td>
+                                                <td><span id="scFinPlnMgt"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wealth building motivation</td>
+                                                <td><span id="scWlthBldMtv"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial emotional intelligence</td>
+                                                <td><span id="scFinEmInt"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Natural behaviour style</td>
+                                                <td><span id="scNtBehSty"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Biases</td>
+                                                <td><span id="scBias1"></span>, <span id="scBias2"></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div id="scDnaNotFound">
+                                        <table>
+
+                                            <tr>
+                                                <td>Financial DNA Questionnaire not completed.</td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
                                 </td>
                             </tr>
                         </table>
@@ -525,17 +547,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'income')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'income')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'income')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'income')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'income')" href="#dna">Financial DNA</a>
         <a class="active" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'income')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'income')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'income')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'income')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'income')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'income')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -553,16 +576,17 @@
                     <td class="container">
                         <table class="container">
                             <tr>
-                                <td style="vertical-align: top; text-align: left;">
+                                <td style="vertical-align: top; text-align: left; height: 50px;">
                                     <h3>Income</h3>
-                                    <label for="incomeType">Filter:</label>
-                                    <select class="filter" name="incomeType" id="incomeType">
-                                        <option value="all">-select-</option>
-                                        <option value="employment">Employment</option>
-                                        <option value="asset based">Asset based</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                    <br>
+                                    Filter: <div class="filter">
+                                        <select name="incomeType" id="incomeType">
+                                            <option value="all">-select-</option>
+                                            <option value="employment">Employment</option>
+                                            <option value="asset based">Asset based</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <span class="focus"></span>
+                                    </div>
                                     <br>
                                     <table class="infoGridHead">
                                         <tbody>
@@ -617,17 +641,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'asset')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'asset')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'asset')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'asset')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'asset')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'asset')" href="#income">Cashflow</a>
         <a class="active" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'asset')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'asset')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'asset')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'asset')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'asset')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -646,20 +671,20 @@
                         <table class="container">
                             <tr>
                                 <td style="width: 500px; vertical-align: top; text-align: left;">
-                                    <label for="assetType">Filter:</label>
-                                    <select onchange=" this.dataset.chosen = this.value; " class="custom-select" name="assetType" id="assetType">
-                                        <option value="all">-select-</option>
-                                        <option value="1 cash">1 Cash</option>
-                                        <option value="2 national savings">2 National Savings</option>
-                                        <option value="3 investment">3 Investment</option>
-                                        <option value="4 retirement">4 Retirement</option>
-                                        <option value="5 property">5 Property</option>
-                                        <option value="6 possession">6 Possession</option>
-                                        <option value="7 protection">7 Protection</option>
-                                        <option value="8 liability">8 Liability</option>
-
-                                    </select>
-                                    <br>
+                                    Filter: <div class="filter">
+                                        <select name="assetType" id="assetType">
+                                            <option value="all">-select-</option>
+                                            <option value="1 cash">1 Cash</option>
+                                            <option value="2 national savings">2 National Savings</option>
+                                            <option value="3 investment">3 Investment</option>
+                                            <option value="4 retirement">4 Retirement</option>
+                                            <option value="5 property">5 Property</option>
+                                            <option value="6 possession">6 Possession</option>
+                                            <option value="7 protection">7 Protection</option>
+                                            <option value="8 liability">8 Liability</option>
+                                        </select>
+                                        <span class="focus"></span>
+                                    </div>
                                     <br>
                                     <table class="infoGridHead">
                                         <tbody>
@@ -689,17 +714,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'prof')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'prof')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'prof')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'prof')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'prof')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'prof')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'prof')" href="#asset">Asset Schedule</a>
-        <a class="active" href="#prof">Legals</a>
+        <a class="active" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'prof')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'prof')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'prof')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -727,8 +753,8 @@
                                                     <td><span id="pcWillOnFile"></span></td>
                                                 </tr>
                                                 <tr id="pcWillDetails">
-                                                    <td>Will stored by js?</td>
-                                                    <td><span id="pcWillStoredByjs"></span></td>
+                                                    <td>Will stored by EQ?</td>
+                                                    <td><span id="pcWillStoredByEQ"></span></td>
                                                 </tr id="pcWillDetails">
                                                 <tr id="pcWillDetails">
                                                     <td>Where is will stored?</td>
@@ -742,6 +768,96 @@
                                                     <td>BR assets into trust on 1st death?</td>
                                                     <td><span id="pcAssetsIntoTrust"></span></td>
                                                 </tr>
+                                                </span>
+                                            </table>
+                                        </span>
+                                </p>
+                            </td>
+                            <td style="width: 400px; vertical-align: top; text-align: left;" id="secConWills">
+                                <p >
+                                    <h3><span id="scContactLegal"></span></h3>
+                                        <table class="fieldTable">
+                                            <tr>
+                                                <td>Will in place?</td>
+                                                <td><span id="scWillInPlace"></span></td>
+                                            </tr>
+                                            <tr id="scWillDetails">
+                                                <td>Will on file?</td>
+                                                <td><span id="scWillOnFile"></span></td>
+                                            </tr>
+                                            <tr id="scWillDetails">
+                                                <td>Will stored by EQ?</td>
+                                                <td><span id="scWillStoredByEQ"></span></td>
+                                            </tr>
+                                            <tr id="scWillDetails">
+                                                <td>Where is will stored?</td>
+                                                <td><span id="scWhereWillStored"></span></td>
+                                            </tr>
+                                            <tr id="scWillDetails">
+                                                <td>Date of will</td>
+                                                <td><span id="scDateOfWill"></span></td>
+                                            </tr>
+                                            <tr id="scWillDetails">
+                                                <td>BR assets into trust on 1st death?</td>
+                                                <td><span id="scAssetsIntoTrust"></span></td>
+                                            </tr>
+                                        </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="container">
+                    <table class="container">
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="container">
+                    <table class="container">
+                       
+                        
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <div id="prof2">
+        <!--Side Nav-->
+    <div class="sidebar">
+        <a onclick="toggleDiv('overview', 'prof2')" href="#overview">Overview</a>
+        <a onclick="toggleDiv('objectives', 'prof2')" href="#objectives">Background & Objectives</a>
+        <a onclick="toggleDiv('risk', 'prof2')" href="#risk">Risk</a>
+        <a onclick="toggleDiv('dna', 'prof2')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('income', 'prof2')" href="#income">Cashflow</a>
+        <a onclick="toggleDiv('asset', 'prof2')" href="#asset">Asset Schedule</a>
+        <a onclick="toggleDiv('prof', 'prof2')" href="#prof">Wills</a>
+        <a class="active" href="#prof2">Power of Attorney</a>
+        <a onclick="toggleDiv('fnf', 'prof2')" href="#fnf">Facts & Feedback</a>
+        <a onclick="toggleDiv('actions', 'prof2')" href="#actions">Actions</a>
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
+            <table>
+                <tr>
+                    <td><span class="material-symbols-outlined">sync</span></td>
+                    <td><p>Sync Data</p></td>
+                </tr>
+            </table>
+        </a>
+    </div>
+    
+    <!-- Page content -->
+    <div class="content">
+        <table>
+            <tr>
+                <td class="container">
+                    <table class="container">
+                        <tr>
+                            <td style="width: 400px; vertical-align: top; text-align: left;">
+                                <p >
+                                    <h3><span id="pcContactPoa"></span></h3>
+                                            <table class="fieldTable">
                                                 <tr>
                                                     <td>POA in place?</td>
                                                     <td><span id="pcPoaInPlace"></span></td>
@@ -755,8 +871,8 @@
                                                     <td><span id="pcPoaOnFile"></span></td>
                                                 </tr>
                                                 <tr id="pcPoaDetails">
-                                                    <td>POA stored by js?</td>
-                                                    <td><span id="pcPoaStoredByjs"></span></td>
+                                                    <td>POA stored by EQ?</td>
+                                                    <td><span id="pcPoaStoredByEQ"></span></td>
                                                 </tr>
                                                 <tr id="pcPoaDetails">
                                                     <td>Where is POA stored?</td>
@@ -779,34 +895,10 @@
                                         </span>
                                 </p>
                             </td>
-                            <td style="width: 400px; vertical-align: top; text-align: left;" id="secConOverview">
+                            <td style="width: 400px; vertical-align: top; text-align: left;" id="secConPoa">
                                 <p >
-                                    <h3><span id="scContactLegal"></span></h3>
+                                    <h3><span id="scContactPoa"></span></h3>
                                         <table class="fieldTable">
-                                            <tr>
-                                                <td>Will in place?</td>
-                                                <td><span id="scWillInPlace"></span></td>
-                                            </tr>
-                                            <tr id="scWillDetails">
-                                                <td>Will on file?</td>
-                                                <td><span id="scWillOnFile"></span></td>
-                                            </tr>
-                                            <tr id="scWillDetails">
-                                                <td>Will stored by js?</td>
-                                                <td><span id="scWillStoredByjs"></span></td>
-                                            </tr>
-                                            <tr id="scWillDetails">
-                                                <td>Where is will stored?</td>
-                                                <td><span id="scWhereWillStored"></span></td>
-                                            </tr>
-                                            <tr id="scWillDetails">
-                                                <td>Date of will</td>
-                                                <td><span id="scDateOfWill"></span></td>
-                                            </tr>
-                                            <tr id="scWillDetails">
-                                                <td>BR assets into trust on 1st death?</td>
-                                                <td><span id="scAssetsIntoTrust"></span></td>
-                                            </tr>
                                             <tr>
                                                 <td>POA in place?</td>
                                                 <td><span id="scPoaInPlace"></span></td>
@@ -820,8 +912,8 @@
                                                 <td><span id="scPoaOnFile"></span></td>
                                             </tr>
                                             <tr id="scPoaDetails">
-                                                <td>POA stored by js?</td>
-                                                <td><span id="scPoaStoredByjs"></span></td>
+                                                <td>POA stored by EQ?</td>
+                                                <td><span id="scPoaStoredByEQ"></span></td>
                                             </tr>
                                             <tr id="scPoaDetails">
                                                 <td>Where is POA stored?</td>
@@ -866,17 +958,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'fnf')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'fnf')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'fnf')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'fnf')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'fnf')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'fnf')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'fnf')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'fnf')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'fnf')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'fnf')" href="#prof2">Power of Attorney</a>
         <a class="active" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'fnf')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
@@ -946,17 +1039,18 @@
         <!--Side Nav-->
     <div class="sidebar">
         <a onclick="toggleDiv('overview', 'actions')" href="#overview">Overview</a>
-        <a onclick="toggleDiv('objectives', 'actions')" href="#objectives">Objectives</a>
+        <a onclick="toggleDiv('objectives', 'actions')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('objectives', 'actions')" href="#risk">Risk</a>
         <a onclick="toggleDiv('dna', 'actions')" href="#dna">Financial DNA</a>
         <a onclick="toggleDiv('income', 'actions')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'actions')" href="#asset">Asset Schedule</a>
-        <a onclick="toggleDiv('prof', 'actions')" href="#prof">Legals</a>
+        <a onclick="toggleDiv('prof', 'actions')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'actions')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'actions')" href="#fnf">Facts & Feedback</a>
         <a class="active" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton">
+        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
             <table>
-                <tr class="syncIcon">
+                <tr>
                     <td><span class="material-symbols-outlined">sync</span></td>
                     <td><p>Sync Data</p></td>
                 </tr>
