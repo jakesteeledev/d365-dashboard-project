@@ -164,6 +164,15 @@ function createTableOfEntityLinkedToEntity(tableId, fieldName, recordId, entityN
                     case "ax_asset":
                         var rowId = income["ax_assetid"];
                         break;
+                    case "ax_keyfact":
+                        var rowId = income["ax_keyfactid"];
+                        break;
+                    case "ax_feedback":
+                        var rowId = income["ax_feedbackid"];
+                        break;
+                    case "task":
+                        var rowId = income["taskid"];
+                        break;
                 }
 
                 newRow.addEventListener('click', function(event) {
