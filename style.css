@@ -22,6 +22,43 @@ body {
   border-spacing: 0 6px;
 }
 
+#close {
+  cursor: pointer;
+}
+
+.popupBackground {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #474747;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: .6;
+}
+
+.popup {
+  position: fixed;
+  width: 718px;
+  height: 380px;
+  background-color: #f0f0f0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.familyTreeBtn {
+  background-color: #CFB054 !important;
+  color: white;
+}
+
+.familyTreeBtn:hover {
+  cursor: pointer;
+  font-weight: 400;
+}
+
 select {
   appearance: none;
   background-color: transparent;
