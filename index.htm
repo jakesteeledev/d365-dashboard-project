@@ -7,8 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../eqcrm_/aidDashboard/mainStyle'>
     <link rel='stylesheet' type='text/css' media='screen' href='mainStyle.css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sync" />
-    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />    <script src='main.js'></script>
     <script src='../eqcrm_/aidDashboard/main'></script>
 </head>
 <body>
@@ -18,21 +17,16 @@
         <a class="active" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'overview')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'overview')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'overview')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'overview')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'overview')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'overview')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'overview')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'overview')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'overview')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'overview')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'overview')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'overview')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'overview')" href="#companies">Companies</a>
     </div>
   
     <!-- Page content --> 
@@ -150,8 +144,8 @@
                                         <td><span id="pcDomicile"></span></td>
                                     </tr>
                                     <tr>
-                                        <td>Health</td>
-                                        <td><span id="pcHealth"></span></td>
+                                        <td></td>
+                                        <td class="familyTreeBtn" onclick="showFamilyTree('pc')">Show Family Tree</td>
                                     </tr>
                                 </table>
                             </td>
@@ -182,8 +176,8 @@
                                         <td><span id="scDomicile"></span></td>
                                     </tr>
                                     <tr>
-                                        <td>Health</td>
-                                        <td><span id="scHealth"></span></td>
+                                        <td></td>
+                                        <td class="familyTreeBtn" onclick="showFamilyTree('sc')">Show Family Tree</td>
                                     </tr>
                                 </table>
                             </td>
@@ -214,21 +208,16 @@
             <a href="#overview">Overview</a>
             <a href="#objectives">Background & Objectives</a>
             <a href="#risk">Risk</a>
-            <a href="#dna">Financial DNA</a>
+            <a href="#dna">Risk Profile</a>
             <a href="#income">Cashflow</a>
             <a href="#asset">Asset Schedule</a>
             <a href="#prof">Wills</a>
             <a href="#prof2">Power of Attorney</a>
             <a href="#fnf">Facts & Feedback</a>
             <a href="#actions">Actions</a>
-            <a href="#reload" id="syncButton" class="syncIcon">
-                <table>
-                    <tr>
-                        <td><span class="material-symbols-outlined">sync</span></td>
-                        <td><p>Sync Data</p></td>
-                    </tr>
-                </table>
-            </a>
+            <a href="#tax">Tax</a>
+            <a href="#trusts">Trusts</a>
+            <a href="#companies">Companies</a>
         </div>
   
     <!-- Page content --> 
@@ -243,21 +232,16 @@
             <a class="active" href="#overview">Overview</a>
             <a onclick="toggleDiv('objectives', 'overview')" href="#objectives">Background & Objectives</a>
             <a onclick="toggleDiv('risk', 'overview')" href="#risk">Risk</a>
-            <a onclick="toggleDiv('dna', 'overview')" href="#dna">Financial DNA</a>
+            <a onclick="toggleDiv('dna', 'overview')" href="#dna">Risk Profile</a>
             <a onclick="toggleDiv('income', 'overview')" href="#income">Cashflow</a>
             <a onclick="toggleDiv('asset', 'overview')" href="#asset">Asset Schedule</a>
             <a onclick="toggleDiv('prof', 'overview')" href="#prof">Wills</a>
             <a onclick="toggleDiv('prof2', 'overview')" href="#prof2">Power of Attorney</a>
             <a onclick="toggleDiv('fnf', 'overview')" href="#fnf">Facts & Feedback</a>
             <a onclick="toggleDiv('actions', 'overview')" href="#actions">Actions</a>
-            <a onclick="firstLoad('syncing', 'loadText')" href="#reload" id="syncButton" class="syncIcon">
-                <table>
-                    <tr>
-                        <td><span class="material-symbols-outlined">sync</span></td>
-                        <td><p>Sync Data</p></td>
-                    </tr>
-                </table>
-            </a>
+            <a onclick="toggleDiv('tax', 'overview')" href="#tax">Tax</a>
+            <a onclick="toggleDiv('trusts', 'overview')" href="#trusts">Trusts</a>
+            <a onclick="toggleDiv('companies', 'overview')" href="#companies">Companies</a>
         </div>
   
     <!-- Page content --> 
@@ -272,21 +256,17 @@
         <a onclick="toggleDiv('overview', 'objectives')" href="#overview">Overview</a>
         <a class="active" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'objectives')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'objectives')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'objectives')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'objectives')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'objectives')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'objectives')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'objectives')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'objectives')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'objectives')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'objectives')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'objectives')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'objectives')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -331,21 +311,17 @@
         <a onclick="toggleDiv('overview', 'risk')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'risk')" href="#objectives">Background & Objectives</a>
         <a class="active" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'risk')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'risk')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'risk')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'risk')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'risk')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'risk')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'risk')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'risk')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'risk')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'risk')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'risk')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -396,21 +372,17 @@
         <a onclick="toggleDiv('overview', 'dna')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'dna')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'dna')" href="#risk">Risk</a>
-        <a class="active" href="#dna">Financial DNA</a>
+        <a class="active" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'dna')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'dna')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'dna')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'dna')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'dna')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'dna')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'dna')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'dna')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'dna')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -423,7 +395,7 @@
                     <td class="container">
                         <table class="container">
                             <tr>
-                                <td style="vertical-align: top; text-align: left;">
+                                <td style="vertical-align: top; text-align: left;" id="primConDna">
                                     <h3><span id="pcName"></span></h3>
                                     <div id="pcDnaTable">
                                         <table class="fieldTable">
@@ -461,11 +433,27 @@
                                             </tr>
                                         </table>
                                     </div>
+                                    <div id="pcFinaTable">
+                                        <table class="fieldTable">
+                                            <tr>
+                                                <td>Date Completed</td>
+                                                <td><span id="pcFinaDateCom"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>FinaMetrica Score</td>
+                                                <td><span id="pcFinaScore"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Risk Group</td>
+                                                <td><span id="pcFinaRiskGroup"></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <div id="pcDnaNotFound">
                                         <table>
 
                                             <tr>
-                                                <td>Financial DNA Questionnaire not completed.</td>
+                                                <td>Risk Profile Questionnaire not completed.</td>
                                             </tr>
 
                                         </table>
@@ -510,11 +498,27 @@
                                             </tr>
                                         </table>
                                     </div>
+                                    <div id="scFinaTable">
+                                        <table class="fieldTable">
+                                            <tr>
+                                                <td>Date Completed</td>
+                                                <td><span id="scFinaDateCom"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>FinaMetrica Score</td>
+                                                <td><span id="scFinaScore"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Risk Group</td>
+                                                <td><span id="scFinaRiskGroup"></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                     <div id="scDnaNotFound">
                                         <table>
 
                                             <tr>
-                                                <td>Financial DNA Questionnaire not completed.</td>
+                                                <td>Risk Profile Questionnaire not completed.</td>
                                             </tr>
 
                                         </table>
@@ -534,21 +538,17 @@
         <a onclick="toggleDiv('overview', 'income')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'income')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'income')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'income')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'income')" href="#dna">Risk Profile</a>
         <a class="active" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'income')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'income')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'income')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'income')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'income')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'income')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'income')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'income')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -628,21 +628,17 @@
         <a onclick="toggleDiv('overview', 'asset')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'asset')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'asset')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'asset')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'asset')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'asset')" href="#income">Cashflow</a>
         <a class="active" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'asset')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'asset')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'asset')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'asset')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'asset')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'asset')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'asset')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -659,14 +655,14 @@
                                     Filter: <div class="filter">
                                         <select name="assetType" id="assetType">
                                             <option value="all">-select-</option>
-                                            <option value="1 cash">1 Cash</option>
-                                            <option value="2 national savings">2 National Savings</option>
-                                            <option value="3 investment">3 Investment</option>
-                                            <option value="4 retirement">4 Retirement</option>
-                                            <option value="5 property">5 Property</option>
-                                            <option value="6 possession">6 Possession</option>
-                                            <option value="7 protection">7 Protection</option>
-                                            <option value="8 liability">8 Liability</option>
+                                            <option value="cash">Cash</option>
+                                            <option value="national savings">National Savings</option>
+                                            <option value="investment">Investment</option>
+                                            <option value="retirement">Retirement</option>
+                                            <option value="property">Property</option>
+                                            <option value="possession">Possession</option>
+                                            <option value="protection">Protection</option>
+                                            <option value="liability">Liability</option>
                                         </select>
                                         <span class="focus"></span>
                                     </div>
@@ -701,21 +697,17 @@
         <a onclick="toggleDiv('overview', 'prof')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'prof')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'prof')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'prof')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'prof')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'prof')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'prof')" href="#asset">Asset Schedule</a>
         <a class="active" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'prof')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'prof')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'prof')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'prof')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'prof')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'prof')" href="#companies">Companies</a>
+        
     </div>
     
     <!-- Page content -->
@@ -815,21 +807,17 @@
         <a onclick="toggleDiv('overview', 'prof2')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'prof2')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'prof2')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'prof2')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'prof2')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'prof2')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'prof2')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'prof2')" href="#prof">Wills</a>
         <a class="active" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'prof2')" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'prof2')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'prof2')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'prof2')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'prof2')" href="#companies">Companies</a>
+        
     </div>
     
     <!-- Page content -->
@@ -945,21 +933,17 @@
         <a onclick="toggleDiv('overview', 'fnf')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'fnf')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('risk', 'fnf')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'fnf')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'fnf')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'fnf')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'fnf')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'fnf')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'fnf')" href="#prof2">Power of Attorney</a>
         <a class="active" href="#fnf">Facts & Feedback</a>
         <a onclick="toggleDiv('actions', 'fnf')" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'fnf')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'fnf')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'fnf')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -1026,21 +1010,17 @@
         <a onclick="toggleDiv('overview', 'actions')" href="#overview">Overview</a>
         <a onclick="toggleDiv('objectives', 'actions')" href="#objectives">Background & Objectives</a>
         <a onclick="toggleDiv('objectives', 'actions')" href="#risk">Risk</a>
-        <a onclick="toggleDiv('dna', 'actions')" href="#dna">Financial DNA</a>
+        <a onclick="toggleDiv('dna', 'actions')" href="#dna">Risk Profile</a>
         <a onclick="toggleDiv('income', 'actions')" href="#income">Cashflow</a>
         <a onclick="toggleDiv('asset', 'actions')" href="#asset">Asset Schedule</a>
         <a onclick="toggleDiv('prof', 'actions')" href="#prof">Wills</a>
         <a onclick="toggleDiv('prof2', 'actions')" href="#prof2">Power of Attorney</a>
         <a onclick="toggleDiv('fnf', 'actions')" href="#fnf">Facts & Feedback</a>
         <a class="active" href="#actions">Actions</a>
-        <a onclick="firstLoad('syncing', 'loadText')" class="syncIcon" href="#reload" id="syncButton">
-            <table>
-                <tr>
-                    <td><span class="material-symbols-outlined">sync</span></td>
-                    <td><p>Sync Data</p></td>
-                </tr>
-            </table>
-        </a>
+        <a onclick="toggleDiv('tax', 'actions')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'actions')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'actions')" href="#companies">Companies</a>
+        
     </div>
   
     <!-- Page content -->
@@ -1097,6 +1077,299 @@
                 </tr>
             </table>
     </div>
+    </div>
+
+    <div id="tax">
+        <!--Side Nav-->
+    <div class="sidebar">
+        <a onclick="toggleDiv('overview', 'tax')" href="#overview">Overview</a>
+        <a onclick="toggleDiv('objectives', 'tax')" href="#objectives">Background & Objectives</a>
+        <a onclick="toggleDiv('risk', 'tax')" href="#risk">Risk</a>
+        <a onclick="toggleDiv('dna', 'tax')" href="#dna">Risk Profile</a>
+        <a onclick="toggleDiv('income', 'tax')" href="#income">Cashflow</a>
+        <a onclick="toggleDiv('asset', 'tax')" href="#asset">Asset Schedule</a>
+        <a onclick="toggleDiv('prof', 'tax')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'tax')" href="#prof2">Power of Attorney</a>
+        <a onclick="toggleDiv('fnf', 'tax')" href="#fnf">Facts & Feedback</a>
+        <a onclick="toggleDiv('actions', 'tax')" href="#actions">Actions</a>
+        <a class="active" href="#Tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'tax')" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'tax')" href="#companies">Companies</a>
+        
+    </div>
+  
+    <!-- Page content --> 
+    <div class="content">
+        <table>
+            <tr>
+                <td class="container">
+                    <table class="container">
+                        <tr>
+                            <td style="width: 400px; vertical-align: top; text-align: left;">
+                                <h3><span id="pcKnownAsTax"></span></h3>
+                                <table class="fieldTable">
+                                    <tr>
+                                        <td>Marriage Allowance Used?</td>
+                                        <td><span id="pcMarriageAllowance"></span></td>
+                                    </tr>
+                                    <tr id="pcMarrAllow">
+                                        <td>Marriage Allowance Notes</td>
+                                        <td><span id="pcMarriageAllowanceNotes"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CGT</td>
+                                        <td><span id="pcCgt"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ISA Contributions</td>
+                                        <td><span id="pcIsaContributions"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pension Contributions</td>
+                                        <td><span id="pcPensionContributions"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pension Protection</td>
+                                        <td><span id="pcPensionProtection"></span></td>
+                                    </tr>
+                                    <tr id="pcPensionProt">
+                                        <td>Protection Type</td>
+                                        <td><span id="pcPensionProtectionType"></span></td>
+                                    </tr>
+                                    <tr id="pcPensionProt">
+                                        <td>Certificate On File</td>
+                                        <td><span id="pcCertOnFile"></span></td>
+                                    </tr>
+                                    <tr id="pcPensionProt">
+                                        <td>Protected LTA Amount</td>
+                                        <td><span id="pcProtLTAAmount"></span></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width: 400px; vertical-align: top; text-align: left;" id="secConTax">
+                                <h3><span id="scKnownAsTax"></span></h3>
+                                <table class="fieldTable">
+                                    <tr>
+                                        <td>Marriage Allowance Used?</td>
+                                        <td><span id="scMarriageAllowance"></span></td>
+                                    </tr>
+                                    <tr id="scMarrAllow">
+                                        <td>Marriage Allowance Notes</td>
+                                        <td><span id="scMarriageAllowanceNotes"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CGT</td>
+                                        <td><span id="scCgt"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ISA Contributions</td>
+                                        <td><span id="scIsaContributions"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pension Contributions</td>
+                                        <td><span id="scPensionContributions"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pension Protection</td>
+                                        <td><span id="scPensionProtection"></span></td>
+                                    </tr>
+                                    <tr id="scPensionProt">
+                                        <td>Protection Type</td>
+                                        <td><span id="scPensionProtectionType"></span></td>
+                                    </tr>
+                                    <tr id="scPensionProt">
+                                        <td>Certificate On File</td>
+                                        <td><span id="scCertOnFile"></span></td>
+                                    </tr>
+                                    <tr id="scPensionProt">
+                                        <td>Protected LTA Amount</td>
+                                        <td><span id="scProtLTAAmount"></span></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="container">
+                    <table class="container">
+
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="container">
+                    <table class="container">
+                       
+                        
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+    <div id="trusts">
+        <!--Side Nav-->
+    <div class="sidebar">
+        <a onclick="toggleDiv('overview', 'trusts')" href="#overview">Overview</a>
+        <a onclick="toggleDiv('objectives', 'trusts')" href="#objectives">Background & Objectives</a>
+        <a onclick="toggleDiv('risk', 'trusts')" href="#risk">Risk</a>
+        <a onclick="toggleDiv('dna', 'trusts')" href="#dna">Risk Profile</a>
+        <a onclick="toggleDiv('income', 'trusts')" href="#income">Cashflow</a>
+        <a onclick="toggleDiv('asset', 'trusts')" href="#asset">Asset Schedule</a>
+        <a onclick="toggleDiv('prof', 'trusts')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'trusts')" href="#prof2">Power of Attorney</a>
+        <a onclick="toggleDiv('fnf', 'trusts')" href="#fnf">Facts & Feedback</a>
+        <a onclick="toggleDiv('actions', 'trusts')" href="#actions">Actions</a>
+        <a onclick="toggleDiv('tax', 'trusts')" href="#tax">Tax</a>
+        <a class="active" href="#trusts">Trusts</a>
+        <a onclick="toggleDiv('companies', 'trusts')" href="#companies">Companies</a>
+        
+    </div>
+  
+    <!-- Page content -->
+    <div class="content">
+        <table>
+            <table>
+                <!--Top left and right items of page-->
+                <tr style="height: 180px;">
+                    <!--Top left item on page-->
+                    <td class="container">
+                        <table class="container">
+                            <tr>
+                                <td style="width: 500px; vertical-align: top; text-align: left;">
+                                    <table class="infoGridHead">
+                                        <tbody>
+                                            <tr>
+                                                <th style="width: 250px;">Type</th>
+                                                <th style="width: 250px;">Start Date</th>
+                                                <th style="width: 350px;">Name</th>
+                                                <th style="width: 100px;">Age</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="infoGrid" id="trustTable">
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    </div>
+
+    <div id="companies">
+        <!--Side Nav-->
+    <div class="sidebar">
+        <a onclick="toggleDiv('overview', 'companies')" href="#overview">Overview</a>
+        <a onclick="toggleDiv('objectives', 'companies')" href="#objectives">Background & Objectives</a>
+        <a onclick="toggleDiv('risk', 'companies')" href="#risk">Risk</a>
+        <a onclick="toggleDiv('dna', 'companies')" href="#dna">Risk Profile</a>
+        <a onclick="toggleDiv('income', 'companies')" href="#income">Cashflow</a>
+        <a onclick="toggleDiv('asset', 'companies')">Asset Schedule</a>
+        <a onclick="toggleDiv('prof', 'companies')" href="#prof">Wills</a>
+        <a onclick="toggleDiv('prof2', 'companies')" href="#prof2">Power of Attorney</a>
+        <a onclick="toggleDiv('fnf', 'companies')" href="#fnf">Facts & Feedback</a>
+        <a onclick="toggleDiv('actions', 'companies')" href="#actions">Actions</a>
+        <a onclick="toggleDiv('tax', 'companies')" href="#tax">Tax</a>
+        <a onclick="toggleDiv('trusts', 'companies')" href="#trusts">Trusts</a>
+        <a class="active" href="#companies">Companies</a>
+        
+    </div>
+  
+    <!-- Page content -->
+    <div class="content">
+        <table>
+            <table>
+                <!--Top left and right items of page-->
+                <tr style="height: 180px;">
+                    <!--Top left item on page-->
+                    <td class="container">
+                        <table class="container">
+                            <tr>
+                                <td style="width: 500px; vertical-align: top; text-align: left;">
+                                    <table class="infoGridHead">
+                                        <tbody>
+                                            <tr>
+                                                <th style="width: 250px;">Type</th>
+                                                <th style="width: 250px;">Company Number</th>
+                                                <th style="width: 350px;">Name</th>
+                                                <th style="width: 100px;">Next Year End</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="infoGrid" id="companyTable">
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    </div>
+
+    <div class="popupBackground" id="popupBackground">
+        <p></p>
+    </div>
+
+    <div class="popup" id="pcFamilyTreeGroup">
+        <div class="familyTree">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 90%;">Family Tree</td>
+                    <td style="width: 10%; text-align: right;"><span id="close" onclick="hideFamilyTree('pc')" class="material-symbols-outlined">close</span></td>
+                </tr>
+            </table>
+            <table class="infoGridHead">
+                <tbody>
+                    <tr>
+                        <th style="width: 250px;">Name</th>
+                        <th style="width: 150px;">How?</th>
+                        <th style="width: 150px;">Status</th>
+                        <th style="width: 150px;">Age</th>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="infoGrid" id="pcFamilyTree">
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="popup" id="scFamilyTreeGroup">
+        <div class="familyTree">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 90%;">Family Tree</td>
+                    <td style="width: 10%; text-align: right;"><span id="close" onclick="hideFamilyTree('sc')" class="material-symbols-outlined">close</span></td>
+                </tr>
+            </table>
+            <table class="infoGridHead">
+                <tbody>
+                    <tr>
+                        <th style="width: 250px;">Name</th>
+                        <th style="width: 150px;">How?</th>
+                        <th style="width: 150px;">Status</th>
+                        <th style="width: 150px;">Age</th>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="infoGrid" id="scFamilyTree">
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
